@@ -7,12 +7,9 @@ T* merge2(const T* a, size_t sa,
           const T* b, size_t sb, T* c)
 {
     size_t total = sa + sb;   
-
     size_t indA = 0;          
     size_t indB = 0;         
-    size_t k    = 0;          
-
-    
+    size_t k= 0;              
     while (indA < sa && indB < sb)
     {
         if (a[indA] < b[indB])   
@@ -43,7 +40,6 @@ T* merge2(const T* a, size_t sa,
         ++indB;
         ++k;
     }
-
     return c;
 }
 
@@ -54,7 +50,6 @@ int main()
 
     size_t sa = sizeof(a) / sizeof(a[0]);   
     size_t sb = sizeof(b) / sizeof(b[0]);   
-
     int c[9];
 
     merge2(a, sa, b, sb, c);
@@ -64,6 +59,5 @@ int main()
         std::cout << c[i] << " ";
     }
     std::cout << '\n';
-
     return 0;
 }
